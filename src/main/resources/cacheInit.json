@@ -1,0 +1,4 @@
+{
+  "code": "codeClass",
+  "rule": "testEntity.setVar1(\"var1\");\n        testEntity.setVar2(\"var2\");\n        testEntity.setVar3(\"var3\");\n        testEntity.setInt1(1+1);\n\t\treturn testEntity;"
+}

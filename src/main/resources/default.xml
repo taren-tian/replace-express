@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<ruleset name="default"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+    <description>Default configuration of PMD. Includes the rules that are most likely to apply everywhere.</description>
+
+    <!-- System rules -->
+<!--    <rule ref="errorprone.xml/DoNotTerminateVM" />-->
+<!--    <rule ref="errorprone.xml/DoNotCallGarbageCollectionExplicitly"/>-->
+
+    <!-- customized rules -->
+    <rule ref="customized_rule.xml/DoNotAllowImportsRule"/> <!-- no import packages allowed -->
+    <rule ref="customized_rule.xml/JavaLangRestrictionRule"/> <!-- restriction for java.lang -->
+
+    <!-- bestpractice rules -->
+<!--      <rule ref="bestpractices.xml/UnusedLocalVariable"/>-->
+
+    <!-- codestyle rules -->
+    <!--    <rule ref="codestyle.xml/LocalVariableNamingConventions"/> &lt;!&ndash; LocalVariableNamingConventions &ndash;&gt;-->
+
+    <!-- Empty rules -->
+    <!--    <rule ref="errorprone.xml/EmptyCatchBlock"/>-->
+    <!--    <rule ref="errorprone.xml/EmptyFinalizer"/>-->
+    <!--    <rule ref="errorprone.xml/EmptyFinallyBlock"/>-->
+    <!--    <rule ref="errorprone.xml/EmptyIfStmt"/>-->
+    <!--    <rule ref="errorprone.xml/EmptyInitializer"/>-->
+    <!--    <rule ref="errorprone.xml/EmptyStatementBlock"/>-->
+    <!--    <rule ref="errorprone.xml/EmptyStatementNotInLoop"/>-->
+    <!--    <rule ref="errorprone.xml/EmptySwitchStatements"/>-->
+    <!--    <rule ref="errorprone.xml/EmptySynchronizedBlock"/>-->
+    <!--    <rule ref="errorprone.xml/EmptyTryBlock"/>-->
+    <!--    <rule ref="errorprone.xml/EmptyWhileStmt"/>-->
+
+    <!--    <rule ref="errorprone.xml/AvoidAccessibilityAlteration"/>-->
+    <!--    <rule ref="errorprone.xml/AvoidAssertAsIdentifier" />-->
+    <!--    <rule ref="errorprone.xml/AvoidCatchingThrowable"/>-->
+    <!--    <rule ref="errorprone.xml/AvoidDecimalLiteralsInBigDecimalConstructor"/>-->
+    <!--    <rule ref="errorprone.xml/AvoidDuplicateLiterals" />-->
+    <!--    <rule ref="errorprone.xml/AvoidFieldNameMatchingMethodName" />-->
+    <!--    <rule ref="errorprone.xml/AvoidFieldNameMatchingTypeName" />-->
+    <!--    <rule ref="errorprone.xml/BadComparison"/>-->
+    <!--    <rule ref="errorprone.xml/BeanMembersShouldSerialize" />-->
+    <!--    <rule ref="errorprone.xml/BrokenNullCheck"/>-->
+    <!--    <rule ref="errorprone.xml/CallSuperFirst" />-->
+    <!--    <rule ref="errorprone.xml/CallSuperLast" />-->
+    <!--    <rule ref="errorprone.xml/CheckSkipResult"/>-->
+    <!--    <rule ref="errorprone.xml/ClassCastExceptionWithToArray"/>-->
+    <!--    <rule ref="errorprone.xml/CloneMethodMustBePublic"/>-->
+    <!--    <rule ref="errorprone.xml/CloneMethodMustImplementCloneable"/>-->
+    <!--    <rule ref="errorprone.xml/CloneMethodReturnTypeMustMatchClassName"/>-->
+    <!--    <rule ref="errorprone.xml/CloneThrowsCloneNotSupportedException"/>-->
+    <!--    <rule ref="errorprone.xml/CloseResource"/>-->
+    <!--    <rule ref="errorprone.xml/CompareObjectsWithEquals"/>-->
+    <!--    <rule ref="errorprone.xml/DontUseFloatTypeForLoopIndices"/>-->
+    <!--    <rule ref="errorprone.xml/MisplacedNullCheck"/>-->
+    <!--    <rule ref="errorprone.xml/MissingBreakInSwitch"/>-->
+    <!--    <rule ref="errorprone.xml/JumbledIncrementer"/>-->
+
+
+</ruleset>

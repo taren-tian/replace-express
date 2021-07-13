@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<ruleset name="CustomizedRule"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>
+        CustomizedRule to detect constructs that are either broken, extremely confusing or prone to runtime errors.
+    </description>
+
+    <rule name="JavaLangRestrictionRule"
+          language="java"
+          since="1.8"
+          message="certain classes in java.lang are forbidden"
+          class="com.pmd.rule.errorprone.JavaLangRestrictionRule">
+        <description>
+            certain classes in java.lang are forbidden
+        </description>
+        <priority>2</priority>
+        <example>
+            <![CDATA[
+package com.pmd.rule.java;
+
+public class HelloWorld {
+    public HelloWorld(){
+        ClassLoader classLoader = null;
+        Class clazz = null;
+        Process p = null;
+    }
+}
+]]>
+        </example>
+    </rule>
+
+    <rule name="DoNotAllowImportsRule"
+          language="java"
+          since="1.8"
+          message="import extra packages are forbidden"
+          class="com.pmd.rule.errorprone.DoNotAllowImportsRule">
+        <description>
+            import extra packages are forbidden
+        </description>
+        <priority>2</priority>
+        <example>
+            <![CDATA[
+package com.pmd.rule.java;
+
+public class HelloWorld {
+    public HelloWorld(){
+        java.io.File file = null;
+    }
+}
+]]>
+        </example>
+    </rule>
+
+
+</ruleset>
