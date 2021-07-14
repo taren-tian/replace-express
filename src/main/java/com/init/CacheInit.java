@@ -47,7 +47,7 @@ public class CacheInit implements Starter {
                             //时间可能需要处理一下
                             long extendTime = (Long) extendMap.get("gmt_create");
                             String className = ExpressionCompilerUtil.getNameByExtendCode(extendCode);
-                            String complieText = doComplieText(extendCode);
+                            String complieText = doCompileText(extendCode);
                             expressionObjectCache.addCache(className, complieText);
                             if (cacheMap.containsKey(extendCode)) {
                                 Map<String, Object> extendMap = (Map<String, Object>) cacheMap.get(extendCode);
@@ -77,7 +77,7 @@ public class CacheInit implements Starter {
         logger.info("初始化缓存结束，总耗时{}", (endTime - startTime));
     }
 
-    private String doComplieText(String code) {
+    private String doCompileText(String code) {
         String className = ExpressionCompilerUtil.getNameByExtendCode(code);
         byte[] compilerTextByte = ExpressionCompilerUtil.getCompilerTextFromMemory(className);
         return Base64.getDecoder().decode(compilerTextByte).toString();
